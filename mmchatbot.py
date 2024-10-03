@@ -78,7 +78,7 @@ def main():
    
 
     # Example: Load a PDF file programmatically
-    pdf_file_path = 'fit.pdf'
+    pdf_file_path = 'Welcome to Mind and Muscle.pdf'
 
     with open(pdf_file_path, 'rb') as f:
         pdf_file = BytesIO(f.read())
