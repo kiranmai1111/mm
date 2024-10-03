@@ -68,33 +68,17 @@ def user_input(user_query):
     st.write(response)
 
 
-def image_to_base64(image_path):
-    """Convert an image file to a base64 string."""
-    with open(image_path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode('utf-8')
+
 
 
 def main():
     # Set up the main UI
     st.header("Welcome to Mind and Muscle, Ask Anything")
 
-    # Set the background image
-    bg_image_path = 'C:\\Users\\kiranmaip\\PycharmProjects\\pythonProject2\\.venv\\bgchat.jpeg'  # Adjust this path to your image file
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url(data:image/png;base64,{image_to_base64(bg_image_path)});
-            background-size: cover;
-            background-position: center;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+   
 
     # Example: Load a PDF file programmatically
-    pdf_file_path = 'C:\\Users\\kiranmaip\\PycharmProjects\\pythonProject2\\.venv\\fit.pdf.pdf'
+    pdf_file_path = 'fit.pdf'
 
     with open(pdf_file_path, 'rb') as f:
         pdf_file = BytesIO(f.read())
